@@ -40,15 +40,38 @@ The project is being developed incrementally, and this README will be updated as
 
 # ✅ Task 1: Data Understanding & Preprocessing (In Progress)
 
-Objective:
+### Objective:
 
-- Evaluate data cleaning, preprocessing, and feature engineering skills.
-- Dataset Used
-- Adult Census Income Dataset (Kaggle)
+Evaluate data handling skills, including cleaning, preprocessing, encoding, and feature scaling on a real-world dataset with mixed data types.
+
+### Dataset used:
+
+Adult Census Income Dataset (Kaggle)
+
+### Dataset Characteristics:
+
 - Mixed data types:
-- Numerical features (age, hours-per-week, etc.)
-- Categorical features (workclass, education, occupation, etc.)
-- Missing values represented as ?
+- Numerical features (e.g., age, education.num, hours.per.week)
+- Categorical features (e.g., workclass, occupation, marital.status)
+- Missing values represented using ?
+- Binary target variable: income (<=50K, >50K)
+
+### Work Completed So Far
+
+- Initial data exploration and understanding
+- Identification and analysis of missing values
+- Treatment of missing categorical values as explicit “unknown” categories to avoid bias
+- Statistical validation of relationships between categorical variables
+- Feature-wise encoding strategy:
+- One-hot encoding for nominal categorical features
+- Binary encoding for gender
+- Feature scaling based on distribution characteristics:
+- Standard scaling, robust scaling, and log-transformation where appropriate
+- Leakage-safe preprocessing using ColumnTransformer and train–test split
+
+Note: 
+
+All preprocessing steps are implemented in a pipeline-friendly manner to ensure reproducibility and production readiness.
 
 ## 📌 Project Management
 
