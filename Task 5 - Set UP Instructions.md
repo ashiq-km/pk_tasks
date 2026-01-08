@@ -41,8 +41,18 @@ cd pk_tasks
 
 ## 2. Create and Activate Virtual Environment (Recommended)
 
+Ensure Python 3.10 is installed.
+
+Create a virtual environment using: 
+
+bash
 ```bash
-python -m venv venv
+python3.10 -m venv venv
+```
+
+windows
+```powershell
+py -3.10 -m venv venv
 ```
 
 ### Activate the environment
