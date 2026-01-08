@@ -92,7 +92,7 @@ This model is loaded automatically when the FastAPI application starts.
 From the **project root directory**, run:
 
 ```bash
-uvicorn Task_4.main:app --reload
+uvicorn Task_4.app.main:app --reload
 ```
 
 If successful, you should see output similar to:
