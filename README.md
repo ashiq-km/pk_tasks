@@ -108,7 +108,7 @@ Demonstrate core deep learning fundamentals through end-to-end model design, tra
 - Data augmentation significantly improved performance
 
 **For detailed conceptual explanations, feature impact, and potential improvements, please refer to:**  
-📄 [`Task_3_AI_Logic_&_Model_Explanation.md`](Task_3_AI_Logic_&_Model_Explanation.md)
+📄 Task 3 - AI Logic & Model Explanation.md
 
 ---
 
