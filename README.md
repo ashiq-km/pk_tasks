@@ -3,117 +3,236 @@
   style="max-width: 100%; height: auto;"
 />
 
-# 🔆 Overview
+<div style="font-family: Arial, sans-serif; line-height: 1.6; max-width: 1100px; margin: auto; padding: 24px;">
 
-This repository contains my implementation for the AI Assignment aimed at evaluating end-to-end AI/ML skills, covering:
+  <h1 style="color:#0b5394;">🔆 AI Assignment – End-to-End AI/ML Implementation</h1>
 
-- Data understanding & preprocessing
-- Model building (ML / DL)
-- AI logic & explainability
-- Deployment readiness via API
-- Git hygiene & documentation
+  <p>
+    This repository contains my implementation for the <strong>AI Assignment</strong> aimed at evaluating 
+    <strong>end-to-end AI/ML engineering skills</strong>, covering the complete lifecycle from 
+    data understanding to model deployment.
+  </p>
 
-The project is being developed incrementally, and this README will be updated as each task is completed.
+  <ul>
+    <li>Data understanding & preprocessing</li>
+    <li>Model building (ML / DL)</li>
+    <li>AI logic & explainability</li>
+    <li>Deployment readiness via API</li>
+    <li>Git hygiene & documentation</li>
+  </ul>
 
----
+  <p>
+    The project has been developed incrementally, following a task-based structure to simulate 
+    a real-world AI/ML workflow.
+  </p>
 
-## ☠️ Objectives
+  <hr style="margin: 30px 0;">
 
-- Demonstrate data handling and preprocessing skills
-- Build and evaluate machine learning / deep learning models
-- Explain model choice and feature impact
-- Expose predictions via a production-style API
-- Follow clean Git practices and documentation standards
+  <h2 style="color:#24292e;">☠️ Objectives</h2>
+  <ul>
+    <li>Demonstrate strong data handling and preprocessing skills</li>
+    <li>Build, evaluate, and reason about ML and DL models</li>
+    <li>Explain model decisions and feature impact</li>
+    <li>Expose predictions through a production-style API</li>
+    <li>Follow clean Git practices and maintain clear documentation</li>
+  </ul>
 
----
+  <hr style="margin: 30px 0;">
 
-## 📂 Project Structure (Current)
+  <h2 style="color:#24292e;">📂 Project Structure</h2>
 
-```
+  <pre style="background:#f6f8fa; padding:16px; border-radius:6px;">
 .
 ├── Task_1/
-│ └── notebooks/
-│ └── data_handling_skills.ipynb
+│   └── notebooks/
+│       └── data_handling_skills.ipynb
 ├── Task_2/
-│ └── notebooks/
-│ └── cnn_image_classification.ipynb
-├── Task_3_AI_Logic_&_Model_Explanation.md
+│   ├── notebooks/
+│   │   └── cnn_cifar10.ipynb
+│   └── requirements.txt
+├── Task 3 - AI Logic & Model Explanation.md
+├── Task_4/
+│   └── app/
+│       └── main.py
+├── Task 5 - Set Up Instructions.md
+├── Model Explanation.md
 ├── .gitignore
+├── pyproject.toml
 └── README.md
-```
+  </pre>
 
+  <p style="color:#6a737d;">
+    ⚠️ The structure is modular and mirrors real-world AI projects, separating experimentation, logic, and deployment.
+  </p>
 
-⚠️ Note: The structure will expand as subsequent tasks are implemented.
+  <hr style="margin: 30px 0;">
 
----
+  <h2 style="color:#2e7d32;">✅ Task 1: Data Understanding & Preprocessing</h2>
 
-# ✅ Task 1: Data Understanding & Preprocessing (In Progress)
+  <h4>Objective</h4>
+  <p>
+    Evaluate data handling skills including cleaning, preprocessing, encoding, and feature scaling
+    on a real-world dataset with mixed data types.
+  </p>
 
-### Objective
+  <h4>Dataset Used</h4>
+  <p><strong>Adult Census Income Dataset</strong> (Kaggle)</p>
 
-Evaluate data handling skills, including cleaning, preprocessing, encoding, and feature scaling on a real-world dataset with mixed data types.
+  <h4>Dataset Characteristics</h4>
+  <ul>
+    <li>Mixed data types (numerical + categorical)</li>
+    <li>Missing values represented using <code>?</code></li>
+    <li>Binary target variable: income (≤50K, &gt;50K)</li>
+  </ul>
 
-### Dataset used
+  <h4>Work Completed</h4>
+  <ul>
+    <li>Initial data exploration and understanding</li>
+    <li>Identification and treatment of missing values</li>
+    <li>Handling missing categorical values as explicit <em>unknown</em> categories</li>
+    <li>Statistical validation of categorical feature relationships</li>
+    <li>Feature encoding strategies:
+      <ul>
+        <li>One-hot encoding for nominal features</li>
+        <li>Binary encoding for gender</li>
+      </ul>
+    </li>
+    <li>Feature scaling based on distribution:
+      <ul>
+        <li>Standard scaling</li>
+        <li>Robust scaling</li>
+        <li>Log transformation where appropriate</li>
+      </ul>
+    </li>
+    <li>Leakage-safe preprocessing using <code>ColumnTransformer</code> and train–test split</li>
+  </ul>
 
-**Adult Census Income Dataset (Kaggle)**
+  <p><em>
+    All preprocessing steps are pipeline-friendly and reproducible, ensuring production readiness.
+  </em></p>
 
-### Dataset Characteristics
+  <hr style="margin: 30px 0;">
 
-- Mixed data types:
-  - Numerical features (e.g., age, education.num, hours.per.week)
-  - Categorical features (e.g., workclass, occupation, marital.status)
-- Missing values represented using `?`
-- Binary target variable: income (`<=50K`, `>50K`)
+  <h2 style="color:#2e7d32;">✅ Task 2: Model Building (Deep Learning)</h2>
 
-### Work Completed So Far
+  <h4>Objective</h4>
+  <p>
+    Demonstrate deep learning fundamentals through end-to-end CNN design, training, and evaluation.
+  </p>
 
-- Initial data exploration and understanding
-- Identification and analysis of missing values
-- Treatment of missing categorical values as explicit “unknown” categories to avoid bias
-- Statistical validation of relationships between categorical variables
-- Feature-wise encoding strategy:
-  - One-hot encoding for nominal categorical features
-  - Binary encoding for gender
-- Feature scaling based on distribution characteristics:
-  - Standard scaling, robust scaling, and log-transformation where appropriate
-- Leakage-safe preprocessing using `ColumnTransformer` and train–test split
+  <h4>Approach</h4>
+  <ul>
+    <li>Built a Convolutional Neural Network (CNN) for image classification</li>
+    <li>Applied proper image preprocessing and normalization</li>
+    <li>Used data augmentation to improve generalization</li>
+    <li>Model architecture included:
+      <ul>
+        <li>Convolution layers for feature extraction</li>
+        <li>Batch Normalization for training stability</li>
+        <li>ReLU activations</li>
+        <li>MaxPooling for spatial downsampling</li>
+        <li>Global Average Pooling to reduce overfitting</li>
+      </ul>
+    </li>
+  </ul>
 
-**Note:** All preprocessing steps are implemented in a pipeline-friendly manner to ensure reproducibility and production readiness.
+  <h4>Results</h4>
+  <ul>
+    <li>Training and validation accuracy closely aligned</li>
+    <li>Minor test accuracy drop indicating healthy generalization</li>
+    <li>Data augmentation improved robustness</li>
+  </ul>
 
----
+  <p>
+    📄 Detailed reasoning and improvements are documented in <strong>Task 3</strong>.
+  </p>
 
-# ✅ Task 2: Model Building (Deep Learning)
+  <hr style="margin: 30px 0;">
 
-### Objective
+  <h2 style="color:#2e7d32;">✅ Task 3: AI Logic & Model Explanation</h2>
 
-Demonstrate core deep learning fundamentals through end-to-end model design, training, and evaluation.
+  <p>
+    This task focuses on <strong>explaining the model decisions and architecture choices</strong>,
+    covering:
+  </p>
 
-### Approach
+  <ul>
+    <li>Why CNNs are suitable for image classification</li>
+    <li>Role of each architectural component</li>
+    <li>Feature learning and abstraction</li>
+    <li>Generalization behavior and overfitting control</li>
+    <li>Potential improvements and extensions</li>
+  </ul>
 
-- Built a Convolutional Neural Network (CNN) for image classification
-- Applied proper data preprocessing and normalization
-- Used data augmentation to improve generalization
-- Designed a multi-layer CNN with:
-  - Convolutional layers for feature extraction
-  - Batch Normalization for training stability
-  - ReLU activations for non-linearity
-  - MaxPooling for spatial downsampling
-  - Global Average Pooling to reduce overfitting
-- Evaluated performance using training, validation, and test datasets
+  <p>
+    All explanations are documented in:
+    <br>
+    📄 <code>Task_3_AI_Logic_&_Model_Explanation.md</code>
+  </p>
 
-### Results
+  <hr style="margin: 30px 0;">
 
-- Training and validation accuracy are closely aligned
-- Slight drop in test accuracy indicates normal generalization gap
-- Data augmentation significantly improved performance
+  <h2 style="color:#2e7d32;">✅ Task 4: Deployment via FastAPI</h2>
 
-**For detailed conceptual explanations, feature impact, and potential improvements, please refer to:**  
-📄 Task 3 - AI Logic & Model Explanation.md
+  <p>
+    The trained CNN model is exposed via a <strong>FastAPI-based REST API</strong> to demonstrate
+    deployment readiness.
+  </p>
 
----
+  <ul>
+    <li>FastAPI app serves as the production entry point</li>
+    <li>Model is loaded once and reused for inference</li>
+    <li>Image preprocessing handled within the API</li>
+    <li>Endpoints implemented:
+      <ul>
+        <li><code>/</code> – Home</li>
+        <li><code>/health</code> – Health check</li>
+        <li><code>/predict</code> – Image classification</li>
+      </ul>
+    </li>
+    <li>CPU-safe inference (no CUDA required)</li>
+  </ul>
 
-## 📌 Project Management
+  <p>
+    This demonstrates how ML models can be integrated into real-world backend systems.
+  </p>
 
-- Development is tracked using GitHub Issues & Project Board
-- Each task and sub-task is logged as an issue for better traceability
-- Commits follow a task-oriented structure
+  <hr style="margin: 30px 0;">
+
+  <h2 style="color:#2e7d32;">✅ Task 5: Production & Deployment Notes</h2>
+
+  <ul>
+    <li>Separated training and inference dependencies</li>
+    <li>Minimal runtime requirements for easy cloning and execution</li>
+    <li>Platform-independent setup (Windows / Linux / Mac)</li>
+    <li>Clear documentation for reproducibility</li>
+  </ul>
+
+  <hr style="margin: 40px 0;">
+
+  <h2 style="color:#0b5394;">🏁 Conclusion</h2>
+
+  <p>
+    This project demonstrates a complete <strong>end-to-end AI/ML workflow</strong> —
+    from raw data preprocessing and deep learning model development to 
+    explainability and production-ready deployment.
+  </p>
+
+  <p>
+    Emphasis has been placed on:
+  </p>
+
+  <ul>
+    <li>Clean, modular code</li>
+    <li>Reproducibility and deployment safety</li>
+    <li>Clear reasoning behind technical decisions</li>
+    <li>Professional Git and documentation practices</li>
+  </ul>
+
+  <p>
+    The repository reflects real-world AI engineering standards and is designed
+    to be easily extendable for future enhancements.
+  </p>
+
+</div>
+
