@@ -137,7 +137,10 @@ Swagger UI allows interactive testing of all available endpoints.
 
 ## 8. Using the `/predict` Endpoint
 
+* Select POST from the "/docs" endpoint
+* You will see an option there called "Try it Out"
 * Upload an image file (JPG or PNG)
+* Note that your image name shouldn't contain any spaces in its name
 * The image is resized internally to **32 × 32**
 * The API returns:
 
