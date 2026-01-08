@@ -1,8 +1,7 @@
-<img src = "https://pokaktech.com/odoo/1.png"
-  widht = "100%"
-  style = "max-width: 100%; height: auto;"
-  />
-
+<img src="https://pokaktech.com/odoo/1.png"
+  width="100%"
+  style="max-width: 100%; height: auto;"
+/>
 
 # 🔆 Overview
 
@@ -16,6 +15,8 @@ This repository contains my implementation for the AI Assignment aimed at evalua
 
 The project is being developed incrementally, and this README will be updated as each task is completed.
 
+---
+
 ## ☠️ Objectives
 
 - Demonstrate data handling and preprocessing skills
@@ -24,37 +25,45 @@ The project is being developed incrementally, and this README will be updated as
 - Expose predictions via a production-style API
 - Follow clean Git practices and documentation standards
 
+---
+
 ## 📂 Project Structure (Current)
 
 ```
 .
 ├── Task_1/
-│   └── notebooks/
-│       └── data_handling_skills.ipynb
+│ └── notebooks/
+│ └── data_handling_skills.ipynb
+├── Task_2/
+│ └── notebooks/
+│ └── cnn_image_classification.ipynb
+├── Task_3_AI_Logic_&_Model_Explanation.md
 ├── .gitignore
 └── README.md
-
 ```
+
 
 ⚠️ Note: The structure will expand as subsequent tasks are implemented.
 
+---
+
 # ✅ Task 1: Data Understanding & Preprocessing (In Progress)
 
-### Objective:
+### Objective
 
 Evaluate data handling skills, including cleaning, preprocessing, encoding, and feature scaling on a real-world dataset with mixed data types.
 
-### Dataset used:
+### Dataset used
 
-Adult Census Income Dataset (Kaggle)
+**Adult Census Income Dataset (Kaggle)**
 
-### Dataset Characteristics:
+### Dataset Characteristics
 
 - Mixed data types:
-- Numerical features (e.g., age, education.num, hours.per.week)
-- Categorical features (e.g., workclass, occupation, marital.status)
-- Missing values represented using ?
-- Binary target variable: income (<=50K, >50K)
+  - Numerical features (e.g., age, education.num, hours.per.week)
+  - Categorical features (e.g., workclass, occupation, marital.status)
+- Missing values represented using `?`
+- Binary target variable: income (`<=50K`, `>50K`)
 
 ### Work Completed So Far
 
@@ -63,19 +72,48 @@ Adult Census Income Dataset (Kaggle)
 - Treatment of missing categorical values as explicit “unknown” categories to avoid bias
 - Statistical validation of relationships between categorical variables
 - Feature-wise encoding strategy:
-- One-hot encoding for nominal categorical features
-- Binary encoding for gender
+  - One-hot encoding for nominal categorical features
+  - Binary encoding for gender
 - Feature scaling based on distribution characteristics:
-- Standard scaling, robust scaling, and log-transformation where appropriate
-- Leakage-safe preprocessing using ColumnTransformer and train–test split
+  - Standard scaling, robust scaling, and log-transformation where appropriate
+- Leakage-safe preprocessing using `ColumnTransformer` and train–test split
 
-Note: 
+**Note:** All preprocessing steps are implemented in a pipeline-friendly manner to ensure reproducibility and production readiness.
 
-All preprocessing steps are implemented in a pipeline-friendly manner to ensure reproducibility and production readiness.
+---
+
+# ✅ Task 2: Model Building (Deep Learning)
+
+### Objective
+
+Demonstrate core deep learning fundamentals through end-to-end model design, training, and evaluation.
+
+### Approach
+
+- Built a Convolutional Neural Network (CNN) for image classification
+- Applied proper data preprocessing and normalization
+- Used data augmentation to improve generalization
+- Designed a multi-layer CNN with:
+  - Convolutional layers for feature extraction
+  - Batch Normalization for training stability
+  - ReLU activations for non-linearity
+  - MaxPooling for spatial downsampling
+  - Global Average Pooling to reduce overfitting
+- Evaluated performance using training, validation, and test datasets
+
+### Results
+
+- Training and validation accuracy are closely aligned
+- Slight drop in test accuracy indicates normal generalization gap
+- Data augmentation significantly improved performance
+
+**For detailed conceptual explanations, feature impact, and potential improvements, please refer to:**  
+📄 [`Task_3_AI_Logic_&_Model_Explanation.md`](Task_3_AI_Logic_&_Model_Explanation.md)
+
+---
 
 ## 📌 Project Management
 
-Development is tracked using GitHub Issues & Project Board
-
-Each task and sub-task is logged as an issue for better traceability
-
+- Development is tracked using GitHub Issues & Project Board
+- Each task and sub-task is logged as an issue for better traceability
+- Commits follow a task-oriented structure
